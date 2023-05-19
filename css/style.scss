@@ -1,0 +1,145 @@
+@mixin label-all{
+    color: white;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+@mixin text($font, $width){
+    font-size: $font;
+    font-weight: $width;
+    color: white !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: gray;
+    .container{
+        a{
+            text-decoration: none;
+            color: black;
+            transition: .5s all;
+            &:hover{
+                color: rgb(9, 42, 209);
+            }
+        }
+        .row{
+         background-color: rgb(255, 255, 255);
+         .image{
+             img{
+                 width: 10rem;
+                 border-radius: 50%;
+                 border: 5px solid rgb(48, 48, 49);
+                 background:transparent;
+             }
+         }
+         .name{
+             font-size: 30px;
+             font-family: Arial, Helvetica, sans-serif;
+             .surname{
+                 font-size: 35px;
+                 padding: 0; 
+                 font-weight: 900;
+             }
+         }
+         .info{
+            margin-bottom: 10px;
+            #call{
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+        .lorem-info{
+            text-align: center;
+        }
+        .progress-div{
+            padding-bottom: 10px;
+            text-align: center;
+            label{
+                font-size: 17px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 400;
+                color: black;
+            }
+            .progress-bar{
+                background-color: gray;
+            }
+            #pr-1{
+                animation: myMove 3s linear;
+            }
+            #pr-2{
+                animation: myMove1 3s linear;
+            }
+            #pr-3{
+                animation: myMove2 3s linear;
+            }
+        }
+        .info-2{
+            text-align: center;
+        }
+        }
+     
+     }
+}
+@media screen and (max-width:1000px) {
+    body{
+        .container{
+            .row{
+                .image{
+                    img{
+                        width: 8rem;
+                    }
+                }
+                .name{
+                    font-size: 20px;
+                    .surname{
+                        font-size: 25px;
+                    }
+                }
+                .info{
+                   margin-bottom: 10px;
+                   #call{
+                       font-size: 17px;
+                   }
+               }
+               .progress-div{
+                   padding-bottom: 10px;
+                   label{
+                       font-size: 15px;
+                   }
+               }
+            }
+        }
+         }
+    }  
+
+@media screen and (max-width:500px) {
+    *{
+        text-align: start;
+       }
+}
+@keyframes myMove {
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 80%;
+    }
+}
+@keyframes myMove1 {
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 55%;
+    }
+}
+@keyframes myMove2 {
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 95%;
+    }
+}

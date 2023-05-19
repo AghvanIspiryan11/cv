@@ -1,0 +1,117 @@
+body {
+  background-color: gray;
+}
+body .container a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s all;
+}
+body .container a:hover {
+  color: rgb(9, 42, 209);
+}
+body .container .row {
+  background-color: rgb(255, 255, 255);
+}
+body .container .row .image img {
+  width: 10rem;
+  border-radius: 50%;
+  border: 5px solid rgb(48, 48, 49);
+  background: transparent;
+}
+body .container .row .name {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .container .row .name .surname {
+  font-size: 35px;
+  padding: 0;
+  font-weight: 900;
+}
+body .container .row .info {
+  margin-bottom: 10px;
+}
+body .container .row .info #call {
+  font-size: 20px;
+  font-weight: 400;
+}
+body .container .row .lorem-info {
+  text-align: center;
+}
+body .container .row .progress-div {
+  padding-bottom: 10px;
+  text-align: center;
+}
+body .container .row .progress-div label {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: black;
+}
+body .container .row .progress-div .progress-bar {
+  background-color: gray;
+}
+body .container .row .progress-div #pr-1 {
+  animation: myMove 3s linear;
+}
+body .container .row .progress-div #pr-2 {
+  animation: myMove1 3s linear;
+}
+body .container .row .progress-div #pr-3 {
+  animation: myMove2 3s linear;
+}
+body .container .row .info-2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  body .container .row .image img {
+    width: 8rem;
+  }
+  body .container .row .name {
+    font-size: 20px;
+  }
+  body .container .row .name .surname {
+    font-size: 25px;
+  }
+  body .container .row .info {
+    margin-bottom: 10px;
+  }
+  body .container .row .info #call {
+    font-size: 17px;
+  }
+  body .container .row .progress-div {
+    padding-bottom: 10px;
+  }
+  body .container .row .progress-div label {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  * {
+    text-align: start;
+  }
+}
+@keyframes myMove {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes myMove1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 55%;
+  }
+}
+@keyframes myMove2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}/*# sourceMappingURL=style.css.map */
