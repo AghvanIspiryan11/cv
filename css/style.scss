@@ -1,145 +1,372 @@
-@mixin label-all{
-    color: white;
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-}
-@mixin text($font, $width){
-    font-size: $font;
-    font-weight: $width;
-    color: white !important;
-    font-family: Arial, Helvetica, sans-serif;
-}
 body{
-    background-color: gray;
-    .container{
-        a{
-            text-decoration: none;
-            color: black;
-            transition: .5s all;
-            &:hover{
-                color: rgb(9, 42, 209);
+    padding: 0;
+    margin: 0;
+    header{
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url(img/back.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100%;
+        height: 100vh;
+       
+        #main{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0,0,0,0.8);
+            #mainImg{
+                width: 50%;
             }
-        }
-        .row{
-         background-color: rgb(255, 255, 255);
-         .image{
-             img{
-                 width: 10rem;
-                 border-radius: 50%;
-                 border: 5px solid rgb(48, 48, 49);
-                 background:transparent;
-             }
-         }
-         .name{
-             font-size: 30px;
-             font-family: Arial, Helvetica, sans-serif;
-             .surname{
-                 font-size: 35px;
-                 padding: 0; 
-                 font-weight: 900;
-             }
-         }
-         .info{
-            margin-bottom: 10px;
-            #call{
-                font-size: 20px;
-                font-weight: 400;
-            }
-        }
-        .lorem-info{
-            text-align: center;
-        }
-        .progress-div{
-            padding-bottom: 10px;
-            text-align: center;
-            label{
-                font-size: 17px;
+            .close{
+                font-size: 30px;
+                color: white;
+                position: fixed;
+                top: 10px;
+                right: 10px;
                 font-family: Arial, Helvetica, sans-serif;
-                font-weight: 400;
-                color: black;
-            }
-            .progress-bar{
-                background-color: gray;
-            }
-            #pr-1{
-                animation: myMove 3s linear;
-            }
-            #pr-2{
-                animation: myMove1 3s linear;
-            }
-            #pr-3{
-                animation: myMove2 3s linear;
+                font-weight: 700;
+                cursor: pointer;
             }
         }
-        .info-2{
-            text-align: center;
-        }
-        }
-     
-     }
-}
-@media screen and (max-width:1000px) {
-    body{
         .container{
+            .text-with-backdrop {
+                text-align: center;
+                h2{
+                    color: transparent;
+                    background-image: url(img/2.gif);
+                    background-clip: text;
+                    background-size: cover;
+                    display: inline-block;
+                    font-size: 50px;
+                    font-weight: 600;
+                    font-family: Arial, Helvetica, sans-serif;
+                  }
+              }
+              .d-video{
+                video{
+                    z-index: 99;
+                    height: 450px;
+                    width: 100%;
+                }
+              }
+              
+              
             .row{
-                .image{
-                    img{
-                        width: 8rem;
-                    }
+                padding-top: 180px;
+                text-align: center;
+                #pad-but{
+                    padding-bottom: 200px !important;
                 }
-                .name{
+                #user{
+                    width: 10%;
+                }
+                img{
+                    border: none;
+                    background-color: transparent;
+                    width: 100%;
+                    border-radius: 10%;
+                }
+                h1{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 60px;
+                    font-weight: 600;
+                    .name{
+                        transition: .5s;
+                        cursor: pointer;
+                        &:hover{
+                            font-size: 65px;
+                        }
+                    }
+                    .sur{
+                        color: springgreen !important; 
+                        cursor: pointer;
+                        transition: .5s;
+                        &:hover{
+                            font-size: 65px;
+                        }
+                    }                
+                }
+                #animate-this{
+                    overflow: hidden;
+                    transition: .5s;
+                    white-space: nowrap;
+                    animation: myAnimate 2s steps(20) forwards, blink 1s infinite;
+                    border-right: .15rem solid #fcfffe;
+                    font-size: 30px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 400;
+                }
+                .lorem{
+                    font-size: 25px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 600;
+                }
+                #pr-1{
+                    animation: myMove-1 3s linear;
+                }
+                #pr-2{
+                    animation: myMove-2 3s linear;
+                }
+                #pr-3{
+                    animation: myMove-3 3s linear;
+                }
+                #pr-4{
+                    animation: myMove-4 3s linear;
+                }
+                #pr-5{
+                    animation: myMove-5 3s linear;
+                }
+                label{
+                    color: white;
                     font-size: 20px;
-                    .surname{
-                        font-size: 25px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: 500;
+                }
+                .accordion-button{
+                    background: gray;
+                    border: none;
+                    border-radius: 0;
+                    color: white;
+                }
+                .accordion-body{
+                    background: darkgray;
+                    border: none;
+                    border-radius: 0;
+                    color: #232121;
+                }
+                .accordion-item{
+                    border: transparent;
+                    border-radius: 0;
+                }
+                .img-thumbnail{
+                    border: transparent;
+                    border-radius: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .col-md{
+                    position: relative;
+                    .overlay1, .overlay2, .overlay3, .overlay4, .overlay5{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        opacity: 0;
+                        width: 100%;
+                        transition: .5s;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        color: white;
+                        font-size: 20px;
+                        background-color: rgba(0,0,0,0.8);
+                        &:hover{
+                            opacity: 1;
+                        }
                     }
                 }
-                .info{
-                   margin-bottom: 10px;
-                   #call{
-                       font-size: 17px;
-                   }
-               }
-               .progress-div{
-                   padding-bottom: 10px;
-                   label{
-                       font-size: 15px;
-                   }
-               }
             }
         }
-         }
-    }  
+        #logo-image{
+            width: 100%;
+        }
+    }
 
+}
+@keyframes myMove-1 {
+    from{
+        width: 0;
+    }
+    to{
+        width: 90%;
+    }
+}
+@keyframes myMove-2 {
+    from{
+        width: 0;
+    }
+    to{
+        width: 75%;
+    }
+}
+@keyframes myMove-3 {
+    from{
+        width: 0;
+    }
+    to{
+        width: 50%;
+    }
+}
+@keyframes myMove-4 {
+    from{
+        width: 0;
+    }
+    to{
+        width: 65%;
+    }
+}
+@keyframes myMove-5 {
+    from{
+        width: 0;
+    }
+    to{
+        width: 40%;
+    }
+}
+@media screen and (max-width:770px) {
+   .row{
+    h1{
+        font-size: 40px !important;
+    }
+    h2{
+        font-size: 30px !important;
+    }
+    .d-video{
+        video{
+            z-index: 99;
+            height: 300px !important;
+            width: 100%;
+        }
+      }
+      #but{
+        padding-bottom: 250px !important;
+      }
+   }
+}
 @media screen and (max-width:500px) {
-    *{
-        text-align: start;
+    #row-none{
+        padding-top: 0px !important;
+        h1{
+         font-size: 17px !important;
+     }
+        #info{
+            font-size: 16px !important;
+        }
+     .d-video{
+         video{
+             z-index: 99;
+             height: 300px !important;
+             width: 100%;
+         }
        }
+       #but{
+         padding-bottom: 100px !important;
+       }
+    }
+   }
+@media screen and (max-width:700px) {
+    .row{
+        padding-top: 180px;
+        h1{
+            font-size: 40px !important;
+            .name{
+                &:hover{
+                    font-size: 41px !important;
+                }
+            }
+            .sur{
+                &:hover{
+                    font-size: 41px !important;
+                }
+            }                
+        }
+        #animate-this{
+            font-size: 20px !important;
+        }
+        .lorem{
+            font-size: 18px !important; 
+        }
+        #btn-1{
+            font-size: 16px !important;
+        }
+        #mainImg{
+            width: 100%;
+            height: 50%;
+        }
+    }
 }
-@keyframes myMove {
-    from{
+@media screen and (max-width:500px) {
+
+    .row{
+        padding-top: 180px !important;
+        h1{
+            font-size: 30px !important;
+            .name{
+                &:hover{
+                    font-size: 31px !important;
+                }
+            }
+            .sur{
+                &:hover{
+                    font-size: 31px !important;
+                }
+            }                
+        }
+        #animate-this{
+            font-size: 18px !important;
+        }
+        #btn-1{
+            padding: 5px 10px;
+            a{
+            font-size: 14px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) {
+
+    .row{
+        h2{
+            font-size: 25px !important;
+        }
+        p{
+            font-size: 16px !important;
+        }
+        label{
+            font-size: 17px !important;
+        }
+        .accordion-button{
+            font-size: 16px !important;
+        }
+        .accordion-body{
+            font-size: 16px !important;
+        }
+    }
+    }
+    @media screen and (max-width:2000px) {
+        #row-sm{
+            padding-top: 180px !important;
+            padding-bottom: 120px !important;
+        }
+    }
+    @media screen and (max-width:767px) {
+        #row-sm{
+            padding-top: 5px !important;
+            padding-bottom: 120px !important;
+        }
+    }
+@keyframes myAnimate {
+    from {
         width: 0;
     }
-
-    to{
-        width: 80%;
+    to {
+        width: 19ch;
     }
+
 }
-@keyframes myMove1 {
+@keyframes blink {
     from{
-        width: 0;
+        border-color: transparent;
     }
-
     to{
-        width: 55%;
-    }
-}
-@keyframes myMove2 {
-    from{
-        width: 0;
-    }
-
-    to{
-        width: 95%;
+        border-color: #f9fbfa;
     }
 }

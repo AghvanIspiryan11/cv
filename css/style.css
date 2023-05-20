@@ -1,117 +1,427 @@
 body {
-  background-color: gray;
+  padding: 0;
+  margin: 0;
 }
-body .container a {
-  text-decoration: none;
-  color: black;
-  transition: 0.5s all;
+body header {
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url(img/back.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(img/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  height: 100vh;
 }
-body .container a:hover {
-  color: rgb(9, 42, 209);
+body header #main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-body .container .row {
-  background-color: rgb(255, 255, 255);
+body header #main #mainImg {
+  width: 50%;
 }
-body .container .row .image img {
-  width: 10rem;
-  border-radius: 50%;
-  border: 5px solid rgb(48, 48, 49);
-  background: transparent;
+body header #main .close {
+  font-size: 30px;
+  color: white;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
 }
-body .container .row .name {
+body header .container .text-with-backdrop {
+  text-align: center;
+}
+body header .container .text-with-backdrop h2 {
+  color: transparent;
+  background-image: url(img/2.gif);
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-size: cover;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body header .container .d-video video {
+  z-index: 99;
+  height: 450px;
+  width: 100%;
+}
+body header .container .row {
+  padding-top: 180px;
+  text-align: center;
+}
+body header .container .row #pad-but {
+  padding-bottom: 200px !important;
+}
+body header .container .row #user {
+  width: 10%;
+}
+body header .container .row img {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  border-radius: 10%;
+}
+body header .container .row h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+body header .container .row h1 .name {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body header .container .row h1 .name:hover {
+  font-size: 65px;
+}
+body header .container .row h1 .sur {
+  color: springgreen !important;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+body header .container .row h1 .sur:hover {
+  font-size: 65px;
+}
+body header .container .row #animate-this {
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  white-space: nowrap;
+  -webkit-animation: myAnimate 2s steps(20) forwards, blink 1s infinite;
+          animation: myAnimate 2s steps(20) forwards, blink 1s infinite;
+  border-right: 0.15rem solid #fcfffe;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
-}
-body .container .row .name .surname {
-  font-size: 35px;
-  padding: 0;
-  font-weight: 900;
-}
-body .container .row .info {
-  margin-bottom: 10px;
-}
-body .container .row .info #call {
-  font-size: 20px;
   font-weight: 400;
 }
-body .container .row .lorem-info {
-  text-align: center;
-}
-body .container .row .progress-div {
-  padding-bottom: 10px;
-  text-align: center;
-}
-body .container .row .progress-div label {
-  font-size: 17px;
+body header .container .row .lorem {
+  font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  color: black;
+  font-weight: 600;
 }
-body .container .row .progress-div .progress-bar {
-  background-color: gray;
+body header .container .row #pr-1 {
+  -webkit-animation: myMove-1 3s linear;
+          animation: myMove-1 3s linear;
 }
-body .container .row .progress-div #pr-1 {
-  animation: myMove 3s linear;
+body header .container .row #pr-2 {
+  -webkit-animation: myMove-2 3s linear;
+          animation: myMove-2 3s linear;
 }
-body .container .row .progress-div #pr-2 {
-  animation: myMove1 3s linear;
+body header .container .row #pr-3 {
+  -webkit-animation: myMove-3 3s linear;
+          animation: myMove-3 3s linear;
 }
-body .container .row .progress-div #pr-3 {
-  animation: myMove2 3s linear;
+body header .container .row #pr-4 {
+  -webkit-animation: myMove-4 3s linear;
+          animation: myMove-4 3s linear;
 }
-body .container .row .info-2 {
-  text-align: center;
+body header .container .row #pr-5 {
+  -webkit-animation: myMove-5 3s linear;
+          animation: myMove-5 3s linear;
+}
+body header .container .row label {
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+body header .container .row .accordion-button {
+  background: gray;
+  border: none;
+  border-radius: 0;
+  color: white;
+}
+body header .container .row .accordion-body {
+  background: darkgray;
+  border: none;
+  border-radius: 0;
+  color: #232121;
+}
+body header .container .row .accordion-item {
+  border: transparent;
+  border-radius: 0;
+}
+body header .container .row .img-thumbnail {
+  border: transparent;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+body header .container .row .col-md {
+  position: relative;
+}
+body header .container .row .col-md .overlay1, body header .container .row .col-md .overlay2, body header .container .row .col-md .overlay3, body header .container .row .col-md .overlay4, body header .container .row .col-md .overlay5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+body header .container .row .col-md .overlay1:hover, body header .container .row .col-md .overlay2:hover, body header .container .row .col-md .overlay3:hover, body header .container .row .col-md .overlay4:hover, body header .container .row .col-md .overlay5:hover {
+  opacity: 1;
+}
+body header #logo-image {
+  width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  body .container .row .image img {
-    width: 8rem;
+@-webkit-keyframes myMove-1 {
+  from {
+    width: 0;
   }
-  body .container .row .name {
-    font-size: 20px;
+  to {
+    width: 90%;
   }
-  body .container .row .name .surname {
-    font-size: 25px;
+}
+
+@keyframes myMove-1 {
+  from {
+    width: 0;
   }
-  body .container .row .info {
-    margin-bottom: 10px;
+  to {
+    width: 90%;
   }
-  body .container .row .info #call {
-    font-size: 17px;
+}
+@-webkit-keyframes myMove-2 {
+  from {
+    width: 0;
   }
-  body .container .row .progress-div {
-    padding-bottom: 10px;
+  to {
+    width: 75%;
   }
-  body .container .row .progress-div label {
-    font-size: 15px;
+}
+@keyframes myMove-2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+@-webkit-keyframes myMove-3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes myMove-3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@-webkit-keyframes myMove-4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+@keyframes myMove-4 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+@-webkit-keyframes myMove-5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+@keyframes myMove-5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .row h1 {
+    font-size: 40px !important;
+  }
+  .row h2 {
+    font-size: 30px !important;
+  }
+  .row .d-video video {
+    z-index: 99;
+    height: 300px !important;
+    width: 100%;
+  }
+  .row #but {
+    padding-bottom: 250px !important;
   }
 }
 @media screen and (max-width: 500px) {
-  * {
-    text-align: start;
+  #row-none {
+    padding-top: 0px !important;
+  }
+  #row-none h1 {
+    font-size: 17px !important;
+  }
+  #row-none #info {
+    font-size: 16px !important;
+  }
+  #row-none .d-video video {
+    z-index: 99;
+    height: 300px !important;
+    width: 100%;
+  }
+  #row-none #but {
+    padding-bottom: 100px !important;
   }
 }
-@keyframes myMove {
+@media screen and (max-width: 700px) {
+  .row {
+    padding-top: 180px;
+  }
+  .row h1 {
+    font-size: 40px !important;
+  }
+  .row h1 .name:hover {
+    font-size: 41px !important;
+  }
+  .row h1 .sur:hover {
+    font-size: 41px !important;
+  }
+  .row #animate-this {
+    font-size: 20px !important;
+  }
+  .row .lorem {
+    font-size: 18px !important;
+  }
+  .row #btn-1 {
+    font-size: 16px !important;
+  }
+  .row #mainImg {
+    width: 100%;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .row {
+    padding-top: 180px !important;
+  }
+  .row h1 {
+    font-size: 30px !important;
+  }
+  .row h1 .name:hover {
+    font-size: 31px !important;
+  }
+  .row h1 .sur:hover {
+    font-size: 31px !important;
+  }
+  .row #animate-this {
+    font-size: 18px !important;
+  }
+  .row #btn-1 {
+    padding: 5px 10px;
+  }
+  .row #btn-1 a {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .row h2 {
+    font-size: 25px !important;
+  }
+  .row p {
+    font-size: 16px !important;
+  }
+  .row label {
+    font-size: 17px !important;
+  }
+  .row .accordion-button {
+    font-size: 16px !important;
+  }
+  .row .accordion-body {
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 2000px) {
+  #row-sm {
+    padding-top: 180px !important;
+    padding-bottom: 120px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #row-sm {
+    padding-top: 5px !important;
+    padding-bottom: 120px !important;
+  }
+}
+@-webkit-keyframes myAnimate {
   from {
     width: 0;
   }
   to {
-    width: 80%;
+    width: 19ch;
   }
 }
-@keyframes myMove1 {
+@keyframes myAnimate {
   from {
     width: 0;
   }
   to {
-    width: 55%;
+    width: 19ch;
   }
 }
-@keyframes myMove2 {
+@-webkit-keyframes blink {
   from {
-    width: 0;
+    border-color: transparent;
   }
   to {
-    width: 95%;
+    border-color: #f9fbfa;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #f9fbfa;
+  }
+}
